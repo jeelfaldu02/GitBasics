@@ -1,5 +1,6 @@
 package com.example.gitunderstanding
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.gitunderstanding.databinding.ActivityMainBinding
@@ -10,8 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding=ActivityMainBinding.inflate(layoutInflater)
         val view=mainBinding.root
-        setContentView(R.layout.activity_main)
+        setContentView(view)
 
+        mainBinding.buttonDiv.setOnClickListener {
+            val intent=Intent(this,DivActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
