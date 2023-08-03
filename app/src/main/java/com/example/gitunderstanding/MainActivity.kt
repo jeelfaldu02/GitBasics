@@ -13,6 +13,11 @@ class MainActivity : AppCompatActivity() {
         val view=mainBinding.root
         setContentView(view)
 
+        mainBinding.buttonDiv.setOnClickListener {
+            val intent=Intent(this,DivActivity::class.java)
+            startActivity(intent)
+        }
+
         mainBinding.buttonMult.setOnClickListener {
             val intent=Intent(this,MultActivity::class.java)
             startActivity(intent)
