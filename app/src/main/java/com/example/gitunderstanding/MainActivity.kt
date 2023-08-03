@@ -30,5 +30,10 @@ class MainActivity : AppCompatActivity() {
             val intent=Intent(this,SubActivity::class.java)
             startActivity(intent)
         }
+
+        mainBinding.buttonMod.setOnClickListener {
+            val intent=Intent(this,ModuloActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
